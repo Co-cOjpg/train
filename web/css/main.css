@@ -1,0 +1,65 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+a{  
+    display: block;
+    background: rgb(172, 172, 172);
+    width: 220px;
+    height: 70px;
+    margin: 20px ;
+    border-radius: 50px;
+    text-decoration:none;
+    position: relative;
+}
+span{
+    display: block;
+    text-align: center;
+    line-height: 70px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+.button1:hover{
+    background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+}
+.button2:hover{
+    background:linear-gradient(90deg,#fa7199,#f5ce62,#e43603,#fa7199);
+    background-size: 400%;
+    
+}
+a:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition:opacity 0.5s ;
+}
+a:hover:before{
+    opacity: 1;
+    z-index: 1;
+}
+a:hover{
+    z-index: 1;
+    animation: dhua 8s linear infinite;
+}
+@keyframes dhua {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+
+.tracking-in-expand{-webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
