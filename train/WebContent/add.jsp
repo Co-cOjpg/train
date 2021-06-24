@@ -13,7 +13,7 @@
 <title>添加界面</title>
 </head>
 <body>
-<form action="./addServlet" method="post" >
+<form action="/addServlet" method="post" >
 <table align=center  border=1>
 <tr>
 <td>品种:
