@@ -1,5 +1,5 @@
 .icon-box{
-    background: rgb(255, 255, 255);
+    background: rgb(245, 245, 245);
     width:250px ;
     height: 40px;
     position: absolute;
@@ -7,13 +7,15 @@
     text-align: center;
 }
 .icon {
-    background: #eeeeee;
+    background: #00dd60;
     width:120px ;
     display: inline-block;
     text-align: center;
     height: 100%;
-    /* border-radius: 5px; */
-  
+    line-height: 40px;
+    border-radius: 5px;
+    color: #ffffff;
+
 }
 
 .onicon{
@@ -29,7 +31,14 @@
     left: 0;
     top: 40px;
     border-radius: 5px;
-
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: lighter;
+    opacity:0;
+    
+}
+.unicon-box{
+    display: none;
 }
 .unicon:before{
     position:absolute;
@@ -42,7 +51,9 @@
     transform:translateX(-50%) rotate(45deg);
     z-index:unset;
     opacity:1;
+    
 }
+
 
 .onicon:hover  +.unicon{
     /* 关键是top的值的代码 */
@@ -52,7 +63,8 @@
     transition: all 0.4s cubic-bezier(0.68,1.55,0.265,-0.55);
     /* 弹出的速度曲线 */
     pointer-events: auto;
-    background: rgb(172, 82, 82);
+    background: #ffffff;
+   
 
 }
 
@@ -65,7 +77,6 @@
     /* 弹出的速度曲线 */
     pointer-events: auto;
     background: rgb(0, 0, 0);
-
 }
 
 
