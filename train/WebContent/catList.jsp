@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
-<%@ page import="com.gk.Cat"%>
+<%@ page import="com.gk.*"%>
 <!DOCTYPE html>
 <html>
 <head>
