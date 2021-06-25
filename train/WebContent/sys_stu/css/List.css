@@ -1,0 +1,13 @@
+@charset "UTF-8";
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid #808080;
+}
+th {
+  background-color: #87CEFA;
+  color: white;
+  height:30px
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
