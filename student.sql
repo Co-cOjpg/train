@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2021-06-25 22:20:58
+Date: 2021-06-26 19:44:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,7 +28,7 @@ CREATE TABLE `student` (
   `stu_email` varchar(50) NOT NULL,
   `stu_tel` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of student
@@ -40,3 +40,4 @@ INSERT INTO `student` VALUES ('4', '2019232127', '张三', '男', '2021-06-16', 
 INSERT INTO `student` VALUES ('5', '2019232127', '张三', '男', '2021-06-16', '1010874691@qq.com', '13715537820');
 INSERT INTO `student` VALUES ('6', '2019232127', '小刘', '男', '2019-12-01', '1010874691@qq.com', '13716678963');
 INSERT INTO `student` VALUES ('10', '2019232127', '张三', '男', '2021-06-16', '1010874691@qq.com', '13458963210');
+INSERT INTO `student` VALUES ('11', '2019232127', '张三', '女', '2021-06-03', '1010874691@qq.com', '13716678960');

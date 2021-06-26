@@ -80,5 +80,58 @@ public class StuManager {
 			e.printStackTrace();
 		}
 		
-	}	
+	}
+	public List<Stu> getStuListByID(int parseInt) {
+		List<Stu> sl = new ArrayList<Stu>();
+		Connection conn= null;
+		Statement st = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = jdbc.getConnection();
+			String sql ="select   * from  Student t  where t.id =     " + parseInt + " " ;
+			 st = conn.createStatement();
+			 rs =  st.executeQuery(sql);
+			 while (rs.next())
+			 {	
+				 Stu ss = new Stu(); 
+				 ss.setID(rs.getInt("id"));
+				 ss.setNO(rs.getString("stu_no"));
+				 ss.setName(rs.getString("stu_name"));
+				 ss.setSex(rs.getString("stu_sex"));
+				 ss.setBirth(rs.getString("stu_birth"));
+				 ss.setEmail(rs.getString("stu_email"));
+				 ss.setTel(rs.getString("stu_tel"));
+				 sl.add(ss);
+				
+			 }
+			 return sl;
+			
+		}  catch (Exception e) {
+			
+			e.printStackTrace();
+		}finally
+		{
+			jdbc.release(conn, st, rs);
+		}
+		
+		return null;
+	}
+	public void upStu(Stu ss) {
+		Connection conn= null;
+		Statement st = null;
+		
+		try {
+			conn = jdbc.getConnection();
+			String sql ="update Student set stu_no='" + ss.getNO()+ "',stu_name='" + ss.getName()+ "',stu_sex='" + ss.getSex()+ "',stu_birth='" + ss.getBirth()+ "',stu_email='" + ss.getEmail()+ "',stu_tel='" + ss.getTel()+ "' where id=" + ss.getID()+ " ";
+			 st = conn.createStatement();
+			 st.execute(sql);
+			
+		}  catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+
 }
