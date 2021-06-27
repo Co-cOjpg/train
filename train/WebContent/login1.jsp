@@ -24,12 +24,12 @@
 			if(rs.next()){
 				rs=st.executeQuery("select * from user where name='"+name+"' and password='"+password+"'");
 				if(rs.next()){
-					out.print(name+"登录成功");
+					out.print("<script language='javascript'>window.location.href='index.jsp';</script>");
 				}else{
-					out.print("密码输入错误！！！<br>"+"重新<a href=\"login.html\">登录</a>");
+					out.print("<script language='javascript'>alert('密码输入错误！！');window.location.href='login.html';</script>");
 				}
 			}else{
-				out.print("<font color=red>"+name+"</font>用户不存在！！！<br>"+"请点击<a href=\"login.html\">注册</a>");
+				out.print("<script language='javascript'>alert('用户不存在！！');window.location.href='login.html';</script>");
 			}
 		}catch(Exception e){
 			out.print(e);

@@ -53,10 +53,6 @@
 			   }
 			}
 		%>
-<tr>
-<td align='center'><input type='submit' value='批量删除'></td>
-<td align='center' colspan='7'></td>
-</tr>
 </table></form>
 </body>
 <script>

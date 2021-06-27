@@ -47,7 +47,7 @@ public class StuUp2Servlet extends HttpServlet {
 		
 		StuManager sm = new StuManager();
 		sm.upStu(ss);
-		response.getWriter().write("<script language='javascript'>alert('�޸ĳɹ�');window.location.href='./StuList.jsp';</script>");
+		response.getWriter().write("<script language='javascript'>alert('修改成功');window.location.href='./StuList.jsp';</script>");
 	}
 
 	/**

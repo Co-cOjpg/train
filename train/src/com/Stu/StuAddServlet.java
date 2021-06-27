@@ -52,7 +52,7 @@ public class StuAddServlet extends HttpServlet {
 		
 		StuManager sm = new StuManager();
 		sm.addStu(ss);
-		response.getWriter().write("<script language='javascript'>alert('Ìí¼Ó³É¹¦');window.location.href='./StuList.jsp';</script>");
+		response.getWriter().write("<script language='javascript'>alert('æ·»åŠ æˆåŠŸ');window.location.href='./StuList.jsp';</script>");
 }
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

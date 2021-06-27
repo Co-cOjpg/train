@@ -12,17 +12,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 </head>
 <body>
     <div class="top"><a href="http://" class="logo">五险一精</a> 
     <div class="left-button">=</div>
         <div class="top_out">
-            out
+            <a href="login.html">out</a>
         </div>
         <div class="top_admin">
-            admin
+            <a href="login.html">admin</a>
         </div>
 </div>
 <div class="left" id="d">
@@ -31,9 +31,8 @@
                 <input type="radio" id="radio"name="a" />
                 <label for="radio"><i class="i">cat_system</i></label>
                 
-                <li id="open1"><a  href="?a=11">add1</a></li>
-                <li id="open1"><a  href="?a=12">del1</a></li>
-                <li id="open1"><a  href="?a=13">change1</a></li>
+                <li id="open1"><a  href="?a=11">查询</a></li>
+                <li id="open1"><a  href="?a=12">添加</a></li>
             </ul>
         </label>
         
@@ -43,9 +42,8 @@
                <input type="radio" id="radio1" name="a"/>
                 <label for="radio1" ><i class="i">stu_system</i></label>
                 
-                <li id="open2"><a  href="?a=21">add1</a> </li>
-                <li id="open2"><a  href="?a=22">del1</a></li>
-                <li id="open2"><a  href="?a=23">change1</a></li>
+                <li id="open2"><a  href="?a=21">查询</a> </li>
+                <li id="open2"><a  href="?a=22">添加</a></li>
         </ul></label>
 
 
@@ -60,24 +58,18 @@ if(mao==null){
 
 switch(mao){
 case "11" :
-	 url="sys_cat/catList.jsp";
+	 url="./catList.jsp";
    break; 
 case "12" :
-   url="sys_cat/add.jsp";
+   url="./add.jsp";
    break; 
-case "13" :
-	   url="sys_cat/catList.jsp";
-	break; 
 	
 case "21" :
-	   url="sys_stu/StuAdd.jsp";
+	   url="./StuList.jsp";
 	break;
 case "22" :
-	   url="sys_stu/StuList.jsp";
+	   url="./StuAdd.jsp";
 	break;
-case "23" :
-	   url="sys_stu/StuAdd.jsp";
-	break;	
 	
 default :
 	url="main.html";

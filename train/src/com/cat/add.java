@@ -34,9 +34,9 @@ public class add extends HttpServlet {
   String msg1="添加失败";
   String msg2="输入为空"; 
   if(newname==" "||newage==" "||newage==" "||newjieyu==" ") {
-	   response.getWriter().write("<script language=javascript>alert('" +msg2+ "');window.location='./sys_cat/add.jsp'</script>");
+	   response.getWriter().write("<script language=javascript>alert('" +msg2+ "');window.location='./add.jsp'</script>");
    }
-  String url="jdbc:mysql://127.0.0.1:3306/train?characterEncoding=utf-8";
+  String url="jdbc:mysql://localhost:3306/train?characterEncoding=utf-8";
   String sql="insert into cat_system(`Name`,`Age`,`Sex`,`Jieyu`)values(?,?,?,?)"; 
   try {   
    Class.forName("com.mysql.jdbc.Driver"); 
@@ -48,9 +48,9 @@ public class add extends HttpServlet {
    ps.setString(4,newjieyu);
   
    if(ps.executeUpdate()!=0) {
-	   response.getWriter().write("<script language=javascript>alert('" +msg+ "');window.location='./sys_cat/add.jsp'</script>");
+	   response.getWriter().write("<script language=javascript>alert('" +msg+ "');window.location='./add.jsp'</script>");
    }else {
-	   response.getWriter().write("<script language=javascript>alert('" +msg1+ "');window.location='./sys_cat/add.jsp'</script>");
+	   response.getWriter().write("<script language=javascript>alert('" +msg1+ "');window.location='./add.jsp'</script>");
    }
 	   
   } catch (ClassNotFoundException e) {

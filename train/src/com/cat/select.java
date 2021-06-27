@@ -8,9 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.PageContext;
 
-import com.cat.*;
 @WebServlet("/selectServlet")
 public class select extends HttpServlet {
  private static final long serialVersionUID = 1L;    	
@@ -33,7 +31,7 @@ public class select extends HttpServlet {
 		request.setAttribute("catList", catList);
 		
 
-		request.getRequestDispatcher("./sys_cat/catList.jsp").forward(request, response);
+		request.getRequestDispatcher("./catList.jsp").forward(request, response);
 	}
 
 	/**

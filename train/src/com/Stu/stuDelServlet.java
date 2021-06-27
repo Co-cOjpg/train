@@ -33,7 +33,7 @@ public class StuDelServlet extends HttpServlet {
 		
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		response.getWriter().write("<script language='javascript'>alert('É¾³ı³É¹¦');window.location.href='./StuList.jsp';</script>");
+		response.getWriter().write("<script language='javascript'>alert('åˆ é™¤æˆåŠŸ');window.location.href='./StuList.jsp';</script>");
 //		request.getRequestDispatcher("./query.jsp").forward(request, response);
 	}
 

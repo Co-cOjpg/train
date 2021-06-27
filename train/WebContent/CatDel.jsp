@@ -9,7 +9,7 @@
 <body>
 <%!
     public static final String DBDRIVER="com.mysql.jdbc.Driver";
-    public static final String DBURL="jdbc:mysql://127.0.0.1:3306/train?characterEncoding=UTF-8";
+    public static final String DBURL="jdbc:mysql://localhost:3306/train?characterEncoding=UTF-8";
     public static final String DBUSER="root";
     public static final String DBPASS="123456";
     String msg="删除成功";

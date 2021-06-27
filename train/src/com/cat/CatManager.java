@@ -1,9 +1,12 @@
 package com.cat;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.cat.Cat;
+import frame.utils.*;
 
 public class CatManager {
 
@@ -19,7 +22,7 @@ public class CatManager {
 		ResultSet rs = null;
 		
 		try {
-			conn = JdbcUtils.getConnection();
+			conn = jdbc.getConnection();
 			String sql ="SELECT * FROM cat_system";
 			 st = conn.createStatement();
 			 rs =  st.executeQuery(sql);
@@ -41,7 +44,7 @@ public class CatManager {
 			e.printStackTrace();
 		}finally
 		{
-			JdbcUtils.release(conn, st, rs);
+			jdbc.release(conn, st, rs);
 		}
 		
 		return null;
@@ -60,33 +63,5 @@ public class CatManager {
 		System.out.println(resultList);
 		
 	}
-
-	public void addCat(Cat ss) {
-//		if (resultList==null) return;
-//		
-//				resultList.add(ss);
-//			 
-//		
-//		System.out.println(resultList);
-		
-	
-		
-		
-	}
-	
-	
-	
-	
-	public static void main(String[] args) {
-		CatManager sm = new CatManager();
-		
-		Cat ss = new Cat();
-		ss.setSex("��");
-		ss.setName("���");
-		ss.setJieyu("��");
-		sm.addCat(ss);
-	}
-
-
 
 }

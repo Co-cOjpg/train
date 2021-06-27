@@ -24,17 +24,13 @@
 			rs=st.executeQuery("select * from user where name='"+name+"'");
 			
 			if(rs.next()){
-				out.print("用户已经存在  "+"请<a href=\"registered.jsp\">注册</a>");
+				out.print("<script language='javascript'>alert('用户已存在！！');window.location.href='login.html';</script>");
 			}else{
 				if(password1.equals(password2)){
 	 				st.executeUpdate("insert into user(name,password) values('"+name+"','"+ password1 + "');");
-				%>
-				注册成功！！！<br>
-				请点击<a href="login.html">这里跳转到登录页面</a>！！！
-				<span style="font-size:24px;"><meta http-equiv="refresh" content="3;URL=login.html"> </span>
-<% 
+	 				out.print("<script language='javascript'>alert('注册成功！！');window.location.href='login.html';</script>");
 				}else{
-				out.print("密码输入不一致!!!<br>"+"重新<a href=\"login.html\">注册</a>");
+					out.print("<script language='javascript'>alert('两次密码不一样！！');window.location.href='login.html';</script>");
 				}
 			}
 			}

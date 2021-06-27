@@ -14,11 +14,11 @@
 <tr>
 <td  colspan="6" align=center style="height:50px">
 
-<form action="${pageContext.request.contextPath}/selectServlet" method="post">
+<form action="./selectServlet" method="post">
 <input type="submit" value="查看数据">
 
 </form>
-<form action="/select.jsp">
+<form action="./select.jsp">
 品种:<input type="text" name ="Name" id="Name">
 <input type="submit" value="查询">
 </form>
@@ -33,7 +33,7 @@
 			} else {
 
 				for (Cat ss : catList) {
-					String hrefurl = "./sys_cat/CatDel.jsp?catId="+ ss.getId();
+					String hrefurl = "./CatDel.jsp?catId="+ ss.getId();
 		%>
 
 		<tr style="height:40px">
@@ -52,6 +52,6 @@
 			}
 		%>
 	</table>
-	<p align=center><a href="./sys_cat/add.jsp"><input type="button" value="添加"></a></p>
+	<p align=center><a href="./add.jsp"><input type="button" value="添加"></a></p>
 </body>
 </html>
