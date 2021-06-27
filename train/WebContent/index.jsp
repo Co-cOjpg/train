@@ -16,23 +16,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="top"><a href="http://" class="logo">五险一精</a> 
+    <div class="top"><a href="http://" class="logo">五险一精ing</a> 
     <div class="left-button">=</div>
         <div class="top_out">
             <a href="login.html">out</a>
         </div>
-        <div class="top_admin">
-            <a href="login.html">admin</a>
-        </div>
+        
 </div>
 <div class="left" id="d">
         <label for="a">
             <ul  class="open-box"  >
                 <input type="radio" id="radio"name="a" />
-                <label for="radio"><i class="i">cat_system</i></label>
-                
-                <li id="open1"><a  href="?a=11">查询</a></li>
-                <li id="open1"><a  href="?a=12">添加</a></li>
+               <label for="radio1" ><a  href="?a=1">管理1</a> </label>
+
             </ul>
         </label>
         
@@ -40,10 +36,9 @@
             <ul   class="open-box">
         
                <input type="radio" id="radio1" name="a"/>
-                <label for="radio1" ><i class="i">stu_system</i></label>
+               <label for="radio1" ><a  href="?a=2">管理2</a> </label>
                 
-                <li id="open2"><a  href="?a=21">查询</a> </li>
-                <li id="open2"><a  href="?a=22">添加</a></li>
+               
         </ul></label>
 
 
@@ -51,26 +46,18 @@
 <div class="nr" style=" width: 80vw; height: 80vh; position: relative; top:15px; left: 240px;background-color:#f6f4f4;">
 
 <%
-String url=new String("sys_cat/catList.jsp");
+String url=new String("catList.jsp");
 if(mao==null){
 	mao="11";
 }
 
 switch(mao){
-case "11" :
+case "1" :
 	 url="./catList.jsp";
    break; 
-case "12" :
-   url="./add.jsp";
-   break; 
-	
-case "21" :
-	   url="./StuList.jsp";
-	break;
-case "22" :
-	   url="./StuAdd.jsp";
-	break;
-	
+case "2" :
+   url="./StuList.jsp";
+   break; 	
 default :
 	url="main.html";
 }

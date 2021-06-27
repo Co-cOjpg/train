@@ -2,11 +2,15 @@
     border: 0;
     margin: 0;
     padding: 0;
+    text-decoration:none;
+    
 }
 .top{
-    height: 56px;
-    background: #000;
+    height: 40px;
+    background:white;
+    background-size: 100%;
     display: flex;
+    box-shadow: 0 1px 4px rgb(0 21 41 / 8%);;
 }
 .logo{
     float: left;
@@ -14,9 +18,16 @@
     font-size: 18px;
     padding-left: 20px;
     line-height: 50px;
-    width: 200px;
+    height:56px;
+    width: 171px;
     transition: background-color 0.3s ease 0s;
+    background-color:#2b2f3a;
     text-decoration: none;
+    font-family:"宋体";
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 0 10px;
 }
 .left-button,.top_out,.top_admin{
     display:block;
@@ -35,19 +46,18 @@
 .top_out{
     display: block;
     position:absolute;
-    width: 100px;
+    width: 40px;
     right: 20px;
     list-style: none;
-    background-color: crimson;
+    background-color: #1890ff;
+    color: white;
+    top:-5px;
+    font-size:20;
 }
-.top_admin{
-    display: block;
-    position:absolute;
-    width: 100px;
-    right: 200px;
-    list-style: none;
-    background-color: crimson;
+.top_out a{
+	color:white;
 }
+
 
 .left{
     position: absolute;
@@ -56,8 +66,8 @@
     left: 0px;
     z-index: 2;
     padding-top: 10px;
-    background-color: rgb(34, 35, 36);
-    width: 220px;
+    background-color: #304156;
+    width: 190px;
     max-width: 220px;
     overflow: hidden;
     border-right: 1px solid rgb(19, 30, 38);
@@ -70,13 +80,10 @@
     color: rgb(142, 142, 142);
     transition: background-color 0.3s ease 0s;
 }
-.open-box a:hover{
-    border-left: 4px solid rgb(66, 184, 241);
-    background: rgb(24, 24, 24);
-}
+
 .open-box:hover .i{
    color: white;
-   border-left: 4px solid rgb(66, 184, 241);
+ 
 }
 .open-box li{
     
@@ -99,15 +106,18 @@ input:checked  ~ li{
     
 }
 .open-box a{
+	padding-left:50px;
     display: block;
     width: 100%;
     height: 80px;
     line-height: 80px;
-    color: rgb(97, 97, 97);
+    color: #bfcbd9;
 }
 .open-box a:hover{
-    border: 2px solid rgb(66, 241, 226);
-    color: aliceblue;
-    text-align: center;
+    
+    color: #1890ff;
+    background:#1f2d3d;
+    
 }
+
 

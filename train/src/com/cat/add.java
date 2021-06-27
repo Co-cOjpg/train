@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
 @WebServlet("/addServlet")
 public class add extends HttpServlet {
  PreparedStatement ps;
@@ -25,15 +27,16 @@ public class add extends HttpServlet {
  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
   doGet(request, response);
   response.setContentType("text/html; charset=utf-8");
+  
   request.setCharacterEncoding("utf-8");
   String newname=request.getParameter("name");
   String newage=request.getParameter("age");
   String newsex=request.getParameter("sex");
   String newjieyu=request.getParameter("jieyu");
-  String msg="æ·»åŠ æˆåŠŸ";
-  String msg1="æ·»åŠ å¤±è´¥";
-  String msg2="è¾“å…¥ä¸ºç©º"; 
-  if(newname==" "||newage==" "||newage==" "||newjieyu==" ") {
+  String msg="Ìí¼Ó³É¹¦";
+  String msg1="Ìí¼ÓÊ§°Ü";
+  String msg2="ÊäÈëÎª¿Õ"; 
+  if(newname==""||newage==""||newage==""||newjieyu=="") {
 	   response.getWriter().write("<script language=javascript>alert('" +msg2+ "');window.location='./add.jsp'</script>");
    }
   String url="jdbc:mysql://localhost:3306/train?characterEncoding=utf-8";

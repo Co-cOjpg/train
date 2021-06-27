@@ -29,8 +29,14 @@
 	  ResultSet rs = st.executeQuery("SELECT * FROM cat_system Where Name"+" like '%"+name+"%'");
 	 
 	   if(name!="") {
-		 
-		   out.print("<table border=1 align=center  style=width:300px><tr align=center style=heith:30px><td>id</td><td>品种</td><td>年龄</td><td>性别</td><td>是否节育</td><td>操作</td></tr>");
+			%>
+				<h3 align=center>查询</h3>
+				<table align="center" style="width:50vw">
+				<tr align=center style="height:30px ;background-color: #87CEFA;color: white; border:0 ;width:80vw;">
+				<td>id</td><td>品种</td><td>年龄</td><td>性别</td><td>是否节育</td><td>操作</td>
+				</tr>
+			<%
+		   out.print("");
 			
 		   while(rs.next()){
 			   String hrefurl = "./CatDel.jsp?catId="+ rs.getString(1);
@@ -44,6 +50,10 @@
 			  
 	   }
 	   out.print("</table>");
+	   %>
+	   <p align=center><a href="./add.jsp" style="display:inline-block;width:70px;height:30px;color:white;background-color:#0DC316;border-radius:2px;text-decoration:none;justify-content: center;padding-top:8px;margin-right:10px">添加</a>
+	   <a href='catList.jsp'style="display:inline-block;width:70px;height:30px;color:white;background-color:#0DC316;border-radius:2px;text-decoration:none;justify-content: center;padding-top:8px">返回</a></p>
+	   <%
 	   }else {
 		   response.getWriter().write("<script language=javascript>alert('" +msg+ "');window.location='catList.jsp'</script>");
 		   }
@@ -56,3 +66,5 @@
 
 </body>
 </html>
+
+
